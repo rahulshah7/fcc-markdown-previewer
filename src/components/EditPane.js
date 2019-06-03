@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography";
 
-function EditPane({ children, dir }) {
+function EditPane({ children }) {
   return (
     <Typography component="textarea" id="editor">
       {children}

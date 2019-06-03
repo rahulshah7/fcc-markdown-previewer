@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography";
 
-function PreviewPane({ children, dir }) {
+function PreviewPane({ children }) {
   return (
     <Typography component="div" id="preview">
       {children}
