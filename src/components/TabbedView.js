@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function TabbedView() {
+function TabbedView({ editText, previewText }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -42,8 +42,8 @@ function TabbedView() {
         </Tabs>
       </AppBar>
       <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
-        <EditPane>{"# Hello World"}</EditPane>
-        <PreviewPane>{""}</PreviewPane>
+        <EditPane>{editText}</EditPane>
+        <PreviewPane>{previewText}</PreviewPane>
       </SwipeableViews>
     </div>
   );
