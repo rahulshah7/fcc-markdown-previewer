@@ -1,6 +1,6 @@
 import React from "react";
 import SwipeableViews from "react-swipeable-views";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
 
 function TabbedView() {
   const classes = useStyles();
-  const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   function handleChange(event, newValue) {
@@ -42,13 +41,9 @@ function TabbedView() {
           <Tab label="Preview" />
         </Tabs>
       </AppBar>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <EditPane dir={theme.direction}>{"# Hello World"}</EditPane>
-        <PreviewPane dir={theme.direction}>{""}</PreviewPane>
+      <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
+        <EditPane>{"# Hello World"}</EditPane>
+        <PreviewPane>{""}</PreviewPane>
       </SwipeableViews>
     </div>
   );

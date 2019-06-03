@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 
 function EditPane({ children, dir }) {
   return (
-    <Typography component="textarea" dir={dir} id="editor">
+    <Typography component="textarea" id="editor">
       {children}
     </Typography>
   );
@@ -12,7 +12,6 @@ function EditPane({ children, dir }) {
 
 // EditPane.propTypes = {
 //   children: PropTypes.node.isRequired,
-//   dir: PropTypes.string.isRequired,
 // };
 
 export default EditPane;

@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 
 function PreviewPane({ children, dir }) {
   return (
-    <Typography component="div" dir={dir} id="preview">
+    <Typography component="div" id="preview">
       {children}
     </Typography>
   );
@@ -12,7 +12,6 @@ function PreviewPane({ children, dir }) {
 
 // PreviewPane.propTypes = {
 //   children: PropTypes.node.isRequired,
-//   dir: PropTypes.string.isRequired,
 // };
 
 export default PreviewPane;
