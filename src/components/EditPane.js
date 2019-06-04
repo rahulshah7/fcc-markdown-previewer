@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 
 function EditPane({ children, updateText }) {
   function handleKeyUp(e) {
-    updateText(e);
+    updateText(e.target.value);
   }
 
   return (
