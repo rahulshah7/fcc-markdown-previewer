@@ -4,9 +4,11 @@ import Typography from "@material-ui/core/Typography";
 
 function PreviewPane({ children }) {
   return (
-    <Typography component="div" id="preview">
-      {children}
-    </Typography>
+    <Typography
+      component="div"
+      id="preview"
+      dangerouslySetInnerHTML={{ __html: children }}
+    />
   );
 }
 
