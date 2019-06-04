@@ -2,9 +2,13 @@ import React from "react";
 // import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography";
 
-function EditPane({ children }) {
+function EditPane({ children, updateText }) {
+  function handleKeyUp(e) {
+    updateText(e);
+  }
+
   return (
-    <Typography component="textarea" id="editor">
+    <Typography component="textarea" id="editor" onKeyUp={handleKeyUp}>
       {children}
     </Typography>
   );
