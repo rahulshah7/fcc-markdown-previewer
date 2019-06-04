@@ -9,13 +9,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editText: null,
-      previewText: null
+      editText: "",
+      previewText: ""
     };
-    this.updateText = this.updateText.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
   }
 
-  updateText(text) {
+  handleTextChange(text) {
     this.setState({
       editText: text,
       previewText: marked(text)
@@ -26,7 +26,7 @@ class App extends Component {
     fetch(defaultMarkdown)
       .then(response => response.text())
       .then(text => {
-        this.updateText(text);
+        this.handleTextChange(text);
       });
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
           <TabbedView
             editText={this.state.editText}
             previewText={this.state.previewText}
-            updateText={this.updateText}
+            handleTextChange={this.handleTextChange}
           />
         </React.Fragment>
       </div>
