@@ -5,6 +5,10 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 
 import defaultMarkdown from "./assets/default.md";
 
+marked.setOptions({
+  breaks: true //add <br> on a single line break
+});
+
 class App extends Component {
   constructor(props) {
     super(props);
