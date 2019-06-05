@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     height: "100%",
     width: "100%",
-    padding: "1rem",
+    padding: "0.5rem",
     paddingTop: "4rem",
     // Remove text area default styles
     overflow: "auto",
