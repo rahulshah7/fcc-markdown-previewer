@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -48,5 +49,11 @@ function TabbedView({ editText, previewText, handleTextChange }) {
     </div>
   );
 }
+
+TabbedView.propTypes = {
+  editText: PropTypes.string.isRequired,
+  previewText: PropTypes.string.isRequired,
+  handleTextChange: PropTypes.func.isRequired
+};
 
 export default TabbedView;

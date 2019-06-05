@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 
 function PreviewPane({ children }) {
@@ -12,8 +12,8 @@ function PreviewPane({ children }) {
   );
 }
 
-// PreviewPane.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+PreviewPane.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default PreviewPane;

@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 
 function EditPane({ children, handleTextChange }) {
@@ -17,8 +17,9 @@ function EditPane({ children, handleTextChange }) {
   );
 }
 
-// EditPane.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+EditPane.propTypes = {
+  children: PropTypes.node.isRequired,
+  handleTextChange: PropTypes.func.isRequired
+};
 
 export default EditPane;
