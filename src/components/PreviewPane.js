@@ -5,10 +5,13 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
     height: "100%",
+    width: "100%",
+    padding: "1rem",
     paddingTop: "4rem",
+    wordBreak: "break-word",
+
+    // Style Markdown rendered as HTML
     "& h1": {
       color: "green"
     }

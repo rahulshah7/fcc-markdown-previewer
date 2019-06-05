@@ -12,7 +12,8 @@ import PreviewPane from "./PreviewPane";
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 500
+    height: "100vh",
+    width: "100vw"
   }
 }));
 
