@@ -30,7 +30,7 @@ function TabbedView({ editText, previewText, handleTextChange }) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="fixed" color="default">
         <Tabs
           value={value}
           onChange={handleChange}
