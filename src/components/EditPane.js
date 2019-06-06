@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { border } from "@material-ui/system";
 
 const useStyles = makeStyles(theme => ({
   root: {
