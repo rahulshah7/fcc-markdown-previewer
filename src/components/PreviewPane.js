@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: "0.5rem",
       margin: "1rem"
     },
+    "& pre": {
+      overflowX: "auto"
+    },
     "& pre, code": {
       background: theme.palette.grey[200],
       fontWeight: "bold"
