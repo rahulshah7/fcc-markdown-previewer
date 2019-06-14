@@ -24,19 +24,19 @@ function SplitView({ editText, previewText, handleTextChange }) {
     <div className={classes.root}>
       <AppBar position="fixed" color="default">
         <Tabs textColor="primary" variant="fullWidth">
-          <Tab disabled={true} label="Edit" />
           <Tab disabled={true} label="Preview" />
+          <Tab disabled={true} label="Edit" />
         </Tabs>
       </AppBar>
-      <EditPane handleTextChange={handleTextChange}>{editText}</EditPane>
       <PreviewPane>{previewText}</PreviewPane>
+      <EditPane handleTextChange={handleTextChange}>{editText}</EditPane>
     </div>
   );
 }
 
 SplitView.propTypes = {
-  editText: PropTypes.string.isRequired,
   previewText: PropTypes.string.isRequired,
+  editText: PropTypes.string.isRequired,
   handleTextChange: PropTypes.func.isRequired
 };
 

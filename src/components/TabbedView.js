@@ -39,21 +39,21 @@ function TabbedView({ editText, previewText, handleTextChange }) {
           textColor="primary"
           variant="fullWidth"
         >
-          <Tab label="Edit" />
           <Tab label="Preview" />
+          <Tab label="Edit" />
         </Tabs>
       </AppBar>
       <SwipeableViews index={value} onChangeIndex={handleChangeIndex}>
-        <EditPane handleTextChange={handleTextChange}>{editText}</EditPane>
         <PreviewPane>{previewText}</PreviewPane>
+        <EditPane handleTextChange={handleTextChange}>{editText}</EditPane>
       </SwipeableViews>
     </div>
   );
 }
 
 TabbedView.propTypes = {
-  editText: PropTypes.string.isRequired,
   previewText: PropTypes.string.isRequired,
+  editText: PropTypes.string.isRequired,
   handleTextChange: PropTypes.func.isRequired
 };
 
