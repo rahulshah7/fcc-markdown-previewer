@@ -24,8 +24,8 @@ function SplitView({ editText, previewText, handleTextChange }) {
     <div className={classes.root}>
       <AppBar position="fixed" color="default">
         <Tabs textColor="primary" variant="fullWidth">
-          <Tab label="Edit" />
-          <Tab label="Preview" />
+          <Tab disabled={true} label="Edit" />
+          <Tab disabled={true} label="Preview" />
         </Tabs>
       </AppBar>
       <EditPane handleTextChange={handleTextChange}>{editText}</EditPane>
