@@ -15,9 +15,11 @@ class App extends Component {
     super(props);
     this.state = {
       editText: "",
-      previewText: ""
+      previewText: "",
+      isMobile: true
     };
     this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleScreenSize = this.handleScreenSize.bind(this);
   }
 
   handleTextChange(text) {
@@ -27,7 +29,13 @@ class App extends Component {
     });
   }
 
+  handleScreenSize() {
+    this.setState({ isMobile: window.innerWidth < 768 });
+  }
+
   componentDidMount() {
+    this.handleScreenSize();
+    window.addEventListener("resize", this.handleScreenSize);
     fetch(defaultMarkdown)
       .then(response => response.text())
       .then(text => {
@@ -35,16 +43,28 @@ class App extends Component {
       });
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleScreenSize);
+  }
+
   render() {
     return (
       <div className="App">
         <React.Fragment>
           <CssBaseline />
-          <SplitView
-            editText={this.state.editText}
-            previewText={this.state.previewText}
-            handleTextChange={this.handleTextChange}
-          />
+          {this.state.isMobile ? (
+            <TabbedView
+              editText={this.state.editText}
+              previewText={this.state.previewText}
+              handleTextChange={this.handleTextChange}
+            />
+          ) : (
+            <SplitView
+              editText={this.state.editText}
+              previewText={this.state.previewText}
+              handleTextChange={this.handleTextChange}
+            />
+          )}
         </React.Fragment>
       </div>
     );
