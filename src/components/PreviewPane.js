@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
     padding: "0.5rem",
     paddingTop: "4rem",
     wordBreak: "break-word",
+    overflow: "auto",
 
     // Style Markdown rendered as HTML in preview pane
     "& a": { color: theme.palette.secondary.light },

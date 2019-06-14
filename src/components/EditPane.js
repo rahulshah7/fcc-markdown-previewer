@@ -9,8 +9,8 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     padding: "0.5rem",
     paddingTop: "4rem",
-    // Remove text area default styles
     overflow: "auto",
+    // Remove text area default styles
     outline: "none",
     resize: "none",
     border: "none"
