@@ -1,6 +1,7 @@
 import marked from "marked";
 import React, { Component } from "react";
 import TabbedView from "./components/TabbedView";
+import SplitView from "./components/SplitView";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import defaultMarkdown from "./assets/default.md";
@@ -39,7 +40,7 @@ class App extends Component {
       <div className="App">
         <React.Fragment>
           <CssBaseline />
-          <TabbedView
+          <SplitView
             editText={this.state.editText}
             previewText={this.state.previewText}
             handleTextChange={this.handleTextChange}
