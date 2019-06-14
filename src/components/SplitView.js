@@ -13,7 +13,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     height: "100vh",
     width: "100vw",
-    display: "flex"
+    display: "flex",
+    "& #preview": {
+      overflowY: "scroll"
+    }
   }
 }));
 
